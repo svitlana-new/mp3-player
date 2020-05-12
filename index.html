@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Фан сторінка творчості групи Океан Ельзи</title>
-  </head>
-  <body>
-    <h1>Фан сторінка творчості<br> групи Океан Ельзи</h1>
 
-    <div class="music-container" id="music-container">
-      <div class="music-info">
-        <h4 id="title"></h4>
-        <div class="progress-container" id="progress-container">
-          <div class="progress" id="progress"></div>
-        </div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<title>Фан сторінка творчості групи Океан Ельзи</title>
+</head>
+
+<body>
+	<h1>Фан сторінка творчості<br> групи Океан Ельзи</h1>
+
+		<div class="music-container" id="music-container">
+			<div class="music-info">
+				<h4 id="title"></h4>
+				<div class="progress-container" id="progress-container">
+					<div class="progress" id="progress"></div>
+				</div>
+			</div>
+
+			<audio src="music/okean-elzy-vse-bude-dobre.mp3" id="audio"></audio>
+
+			<div class="img-container">
+				<img src="images/okean-elzy-vse-byde-dobre.jpg" alt="music-cover" id="cover" />
       </div>
-
-      <audio src="music/okean-elzy-vse-bude-dobre.mp3" id="audio"></audio>
-
-      <div class="img-container">
-        <img src="images/okean-elzy-vse-byde-dobre.jpg" alt="music-cover" id="cover" />
-      </div>
-      <div class="navigation">
-        <button id="prev" class="action-btn">
+				<div class="navigation">
+					<button id="prev" class="action-btn">
           <i class="fas fa-backward"></i>
         </button>
-        <button id="play" class="action-btn action-btn-big">
+					<button id="play" class="action-btn action-btn-big">
           <i class="fas fa-play"></i>
         </button>
-        <button id="next" class="action-btn">
+					<button id="next" class="action-btn">
           <i class="fas fa-forward"></i>
         </button>
-      </div>
-    </div>
-    <div class="timer-text">
-    <h2>До найближчого концерту залишилося:</h2>
-    </div>
-    <div class="timer"></div>
+				</div>
+			</div>
+			<div class="timer-text">
+				<h2>До найближчого концерту залишилося:</h2>
+			</div>
+			<div class="timer"></div>
+			<section class="order">
+				<h2>Замовити квитки онлайн:</h2>
+				<form action="https://formspree.io/xoqngoly" method="POST" class="order-form">
+					<label>
+                Ваше  ім'я: <input type="text" name="name">
+					</label>
+					<label>
+                Кількість квитків: <input type="text" name="quantity">
+            </label>
+					<p>Побажання:</p>
+					<textarea name="comment" cols="80" rows="10"></textarea>
+					<br>
+					<input class="button-input" type="submit" value="Замовити">
+			</form>
+			</section>
+			<script src="js/index.js"></script>
+</body>
 
-    <script src="js/index.js"></script>
-  </body>
 </html>
