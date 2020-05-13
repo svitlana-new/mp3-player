@@ -146,3 +146,35 @@ timer = setInterval(function () {
     timerShow.innerHTML = timerStr;
   }
 }, 1000);
+
+document.querySelector('.get-tickets-info').addEventListener('click', infoTickets);
+
+async function infoTickets () {
+    const responce = await fetch('tickets-data.json');
+    const dataElse = await responce.json();
+    document.querySelector('.ticketsFanZone1').innerText = dataElse.ticketsFanZone1;
+    document.querySelector('.ticketsFanZone2').innerText = dataElse.ticketsFanZone2;
+    document.querySelector('.ticketsFanZone3').innerText = dataElse.ticketsFanZone3;
+    document.querySelector('.ticketsPlaceFrom1to900').innerText = dataElse.ticketsPlaceFrom1to900;
+    document.querySelector('.ticketsPlaceFrom901to1800').innerText = dataElse.ticketsPlaceFrom901to1800;
+    document.querySelector('.ticketsPlaceFrom1801to2700').innerText = dataElse.ticketsPlaceFrom1801to2700;
+    document.querySelector('.ticketsVip').innerText = dataElse.ticketsVip;
+}
+ document.querySelector('.phone').addEventListener('click', phonePressed);
+  function phonePressed () {
+      alert('Введіть номер телефону у форматі +380123456789')
+  }
+
+  fetch('https://api.openweathermap.org/data/2.5/forecast?q=Lviv,ua&appid=c115e8eacaaa6f671443e3744c1422da')
+  .then(function (resp) {return resp.json() }).then(function (data) {
+    console.log(data);
+    document.querySelector('.weatherCity').textContent = data.name
+    document.querySelector('.weatherForecast').innerHTML = Math.round(data.main.temp - 273) + '&deg;';
+
+    document.querySelector('.weatherDesc').textContent = data.weather[0]['description'];
+    
+    document.querySelector('.weatherIcon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
+    })
+    .catch(function () {
+        
+    });

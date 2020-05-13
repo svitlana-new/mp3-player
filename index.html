@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
 	<link rel="stylesheet" href="css/index.css" />
-	<title>Фан сторінка творчості групи Океан Ельзи</title>
+	<title>Океан Ельзи.Фан сторінка</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 			<audio src="music/okean-elzy-vse-bude-dobre.mp3" id="audio"></audio>
 
 			<div class="img-container">
-				<img src="images/okean-elzy-vse-byde-dobre.jpg" alt="music-cover" id="cover" />
+				<img src="images/okean-elzy-vse-byde-dobre.jpg" alt="Океан Ельзи" id="cover" />
       </div>
 				<div class="navigation">
 					<button id="prev" class="action-btn">
@@ -42,15 +42,39 @@
 				<h2>До найближчого концерту залишилося:</h2>
 			</div>
 			<div class="timer"></div>
+			<div class="tickets-info">
+				<h2>Перевірити наявність вільних квитків</h2>
+				<details>
+					<summary>можна тут: </summary>
+					<p>Перша Фан-зона: <span class="ticketsFanZone1"></span></p>
+					<p>Друга Фан-зона: <span class="ticketsFanZone2"></span></p>
+					<p>Третя Фан-зона: <span class="ticketsFanZone3"></span></p>
+					<p>Сидячі місця, сектор 1, від 1 по 900 місце: <span class="ticketsPlaceFrom1to900"></span></p>
+					<p>Сидячі місця, сектор 2, від 901 по 1800 місце: <span class="ticketsPlaceFrom901to1800"></span>
+					</p>
+					<p>Сидячі місця, сектор 3, від 1801 по 2700 місце: <span class="ticketsPlaceFrom1801to2700"></span>
+					</p>
+					<p>VIP квитки: <span class="ticketsVip"></span></p>
+					<button class="get-tickets-info">Перевірити</button>
+				</details>
+			</div>
 			<section class="order">
+<div class="weather">
+    <h2 class="weatherTitle"Прогноз погоди></h2>
+    <div class="weatherCity"></div>
+    <div class="weatherForecast"></div>
+    <div class="weatherDesc"></div>
+    <div class="weatherIcon"></div>
+</div>
+
 				<h2>Замовити квитки онлайн:</h2>
 				<form action="https://formspree.io/xoqngoly" method="POST" class="order-form">
-					<label>
-                Ваше  ім'я: <input type="text" name="name">
+					<label>Ваше  ім'я: <input type="text" name="name">
 					</label>
-					<label>
-                Кількість квитків: <input type="text" name="quantity">
-            </label>
+					<label class="phone">Номер телефону: <input type="tel" name="phone" pattern="[+]{1}[0-9]{12}">
+                    </label>
+					<label>Кількість квитків: <input type="text" name="number of tickets">
+                    </label>
 					<p>Побажання:</p>
 					<textarea name="comment" cols="80" rows="10"></textarea>
 					<br>

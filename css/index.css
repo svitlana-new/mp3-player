@@ -7,10 +7,9 @@
 body {
   background-image: linear-gradient(
     0deg,
-    rgb(248, 248, 224) 23.8%,
-    rgb(189, 238, 234) 92%
+    rgb(248, 248, 224) 3.8%,
+    rgb(189, 238, 234) 88%
   );
-  height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,10 +162,19 @@ body  form{
     color:rgb(89, 95, 95);
     font-size: 18px;
 }
-body .button-input {
+body .button-input , .get-tickets-info {
     font-style: italic;
     color:rgb(47, 59, 59);
     font-size: 18px;
     border: 1px solid rgb(5, 5, 5);
     border-radius: 0.5em;
-.button:hover {
+}
+body .tickets-info {
+
+    font-style: italic;
+    color:rgb(89, 95, 95);
+    font-size: 18px;
+}
+body .tickets-info p {
+    color: black
+}
